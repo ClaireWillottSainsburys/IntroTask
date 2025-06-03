@@ -1,0 +1,7 @@
+To run locally
+
+Open terminal and enter the following
+
+cd "<<Replace with local file location>>/IntroTaskTemplate/HTML Template" && python3 -m http.server 8000
+
+cd "/Users/claire.willott/IntroTaskTemplate/HTML Template" && python3 -m http.server 8000

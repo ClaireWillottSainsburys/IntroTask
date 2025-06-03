@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Team - Claire Willott</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="nav-placeholder"></header>
+    
+    <div class="spacer-small"></div>
+    <main>
+        <section class="intro">
+            <h1>Software Development Team Roles and Responsibilities</h1>
+            <p>Explain the key roles and responsibilities within your software development team. Use the examples below if applicable, or add your own.</p>            <h2>My Role - Associate Engineer</h2>
+            <p>Discuss your role and responsibilities within your Team.</p>
+
+            <h2>Senior Software Engineer Phil</h2>
+            <p>Talk about the Senior Software Engineers in your team/wider team and what their responsibilities are.</p>
+
+            <h2>Software Tester - Jeevi</h2>
+            <p>Talk about the Software Testers in your team/wider team and what their responsibilities are.</p>
+
+            <h2>Business Analyst (BA) - Dan?</h2>
+            <p>Talk about the Business Analysts in your team/wider team and what their responsibilities are.</p>
+
+            <h2>Product Owner - IDK</h2>
+            <p>Talk about the Product Owner/s in your team/wider team and what their responsibilities are.</p>
+
+            <h2>Engineers - Saif, Andi and Ajay</h2>
+            <p>Engineers  what their responsibilities are.</p>        </section>
+    </main>
+    
+    <div id="contact-placeholder"></div>
+    <div id="footer-placeholder"></div>
+    
+    <script>        fetch('nav.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+        fetch('contact.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('contact-placeholder').innerHTML = html);
+    </script>
+</body>
+</html>

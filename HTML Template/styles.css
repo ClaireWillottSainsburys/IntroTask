@@ -2,21 +2,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(33, 110, 112);
+    padding-top: 80px; /* Add space for fixed navigation */
+    background-color: white;
     color: black;
     line-height: 1.6;
-    background-image: url('./images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat; 
-    background-attachment: fixed; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-h1, h2 {
-    color: rgb(81, 187, 190);
+h1, h2, h3 {
+    color: #6B46C1;
     text-align: center;
 }
 
@@ -34,40 +30,59 @@ section {
     margin: 20px auto;
     padding: 20px;
     width: 800px; 
+    max-width: 800px;
     min-height: 200px; 
     background-color: white;
     color: black;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid rgb(229, 45, 77);
-    display: inline-block; 
+    border: 2px solid #6B46C1;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Standardize internal spacing for all section content */
+section h1, section h2, section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+section p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+section ul {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
 }
 
 section.profile {
     max-width: 800px; 
     margin: 20px auto; 
     padding-left: 20px;
-    background-color: white;
-    color: black;
+    background-color: white;    color: black;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid rgb(229, 45, 77);
-    display: block; 
+    border: 2px solid #6B46C1;
+    display: block;
 }
 
 section.profile .profile-details {
     text-align: left;
 }
 
-section p:first-of-type {
-    font-size: 1.2em;
-    line-height: 1.8;
-    font-weight: 500;
-}
-
+/* Global list styles (will be overridden by section-specific styles) */
 ul {
     list-style-type: disc;
     padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 li {
@@ -90,9 +105,18 @@ button:hover {
 
 /* Navigation Styles */
 nav {
-    background-color: rgba(81, 187, 190, 0.9);
+    background-color: white;
     padding: 1rem;
     text-align: center;
+    border-bottom: 2px solid #6B46C1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -101,11 +125,14 @@ nav a {
     margin: 0 1rem;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    border: 2px solid #6B46C1;
+    transition: all 0.3s ease;
+    background-color: #6B46C1;
 }
 
 nav a:hover {
-    background-color: rgba(229, 45, 77, 0.8);
+    background-color: white;
+    color: #6B46C1;
     text-decoration: none;
 }
 
@@ -115,24 +142,41 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
 }
 
 main h2 {
-    color: #004080;
+    color: #6B46C1;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 main p {
+    margin-top: 0;
     margin-bottom: 15px;
 }
 
 /* Contact Section Styles */
 .contact-section {
-    margin: 2rem auto;
+    margin: 20px auto !important;
     text-align: center;
+    width: 800px;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #6B46C1;
+    display: block !important;
+    box-sizing: border-box;
 }
 
+.contact-section h2 {
+    color: #6B46C1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Contact button styles - keeping for potential future use */
 .contact-buttons {
     display: flex;
     gap: 1rem;
@@ -160,8 +204,8 @@ main p {
 
 /* Footer Styles */
 footer {
-    background-color: rgba(81, 187, 190, 0.9);
-    color: white;
+    background-color: white;
+    color: #6B46C1;
     text-align: center;
     padding: 1rem;
     margin-top: auto;
@@ -239,38 +283,101 @@ footer p {
 }
 
 .contact-icons {
-    margin-top: 15px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.contact-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.2s ease;
+.contact-icon {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
 }
 
-contact-icons img:hover {
-    transform: scale(1.2);
+.contact-icon img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) saturate(100%) invert(24%) sepia(51%) saturate(2878%) hue-rotate(244deg) brightness(90%) contrast(92%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(88%) saturate(5718%) hue-rotate(244deg) brightness(90%) contrast(92%);
+    transform: scale(1.1);
+}
+
+.contact-icon:last-child {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.contact-icon:last-child:hover {
+    opacity: 0.5;
+    transform: none;
 }
 
 .intro-section {
     max-width: 800px; 
     margin: 20px auto; 
-    padding-left: 20px;
+    padding: 20px;
     background-color: white;
     color: black;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid rgb(229, 45, 77);
-    text-align: center; 
-    display: block; 
+    border: 2px solid #6B46C1;
+    text-align: center;
+    display: block;
+}
+
+.intro-section h1, .intro-section h2, .intro-section h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 /* Spacer Classes */
 .spacer-small {
-    height: 2rem;
+    height: 0.5rem; /* Reduced since we have fixed nav with body padding */
+}
+
+/* Navigation Help Section */
+.navigation-help {
+    text-align: left;
+}
+
+.navigation-help h2 {
+    text-align: center;
+    color: #6B46C1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.navigation-help ul {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.navigation-help li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.navigation-help a {
+    color: #6B46C1;
+    text-decoration: none;
+}
+
+.navigation-help a:hover {
+    color: #6B46C1;
+    text-decoration: underline;
 }
 
 /* Profile Content */
@@ -285,8 +392,13 @@ contact-icons img:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    section {
+    body {
+        padding-top: 90px; /* Increase padding for mobile nav */
+    }
+    
+    section, .contact-section {
         width: 90%;
+        max-width: 90%;
         margin: 10px auto;
         padding: 15px;
     }
@@ -296,8 +408,7 @@ contact-icons img:hover {
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
     }
-    
-    .contact-buttons {
+      .contact-buttons {
         flex-direction: column;
         align-items: center;
     }
@@ -306,11 +417,25 @@ contact-icons img:hover {
         width: 80%;
         max-width: 250px;
     }
+    
+    .contact-icons {
+        gap: 30px;
+    }
+    
+    .contact-icon img {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 @media (max-width: 480px) {
-    section {
+    body {
+        padding-top: 120px; /* Increase padding for stacked mobile nav */
+    }
+    
+    section, .contact-section {
         width: 95%;
+        max-width: 95%;
         padding: 10px;
     }
     
@@ -327,8 +452,16 @@ contact-icons img:hover {
     h1 {
         font-size: 1.5rem;
     }
-    
-    .contact-btn {
+      .contact-btn {
         width: 90%;
+    }
+    
+    .contact-icons {
+        gap: 25px;
+    }
+    
+    .contact-icon img {
+        width: 40px;
+        height: 40px;
     }
 }

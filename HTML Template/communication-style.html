@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Communication Style - Claire Willott</title>
-    <link rel="icon" type="image/svg+xml" href="Images/Icons/cat-paw.svg" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,62 +12,32 @@
     <main>
         <section class="intro">
             <h1 style="text-align: center;"><strong>Communication Style</strong></h1>
-            <div class="profile-content">
-                <h2>My Communication Preferences</h2>
-                <p>I believe effective communication is key to successful collaboration in software development.</p>
-                
-                <h3>Team Meetings</h3>
-                <p>I prefer structured meetings with clear agendas and action items. I'm comfortable contributing ideas and asking questions when clarification is needed.</p>
-                
-                <h3>Written Communication</h3>
-                <p>I aim for clear, concise written communication in emails and documentation. I appreciate when technical concepts are explained with examples.</p>
-                
-                <h3>Feedback Style</h3>
-                <p>I value constructive feedback and am open to learning from more experienced team members. I prefer direct, honest communication about areas for improvement.</p>
-                
-                <h3>Collaboration Tools</h3>
-                <p>I'm comfortable using various collaboration tools including Slack, Microsoft Teams, and project management platforms.</p>
-            </div>
+            <p style="text-align: left;">All communication tools have benefits - choosing the right one is important to get the right job done. Throughout the apprenceship I would like to be emailled by my training provider.</p>
+            
+            <p style="text-align: left; color: black; font-weight: bold; margin-bottom: 10px; margin-top: 0;">🤝 F2F Team Meetings</p>
+            <p style="text-align: left;">Face to face team meetings have the intangible value of building relationships in a team. As my team mostly works remotely their value is not quanitifable but helps to build rapport and relationships.</p>
+            
+            <p style="text-align: left; color: black; font-weight: bold; margin-bottom: 10px; margin-top: 0;">💬 Teams/Slack - chat</p>
+            <p style="text-align: left;">Great for quick messages that don't necessarily need an answer straight away. Good for transferring sections of one-time-use code.</p>
+            
+            <p style="text-align: left; color: black; font-weight: bold; margin-bottom: 10px; margin-top: 0;">📧 Email</p>
+            <p style="text-align: left;">Good for mass communication and delivering formal information one way to people.</p>
+            
+            <p style="text-align: left; color: black; font-weight: bold; margin-bottom: 10px; margin-top: 0;">📹 Teams/Slack - video call</p>
+            <p style="text-align: left;">A good collaboration tool that allows 2 or more people to work together.</p>
         </section>
+        
     </main>
     
     <div id="contact-placeholder"></div>
     <div id="footer-placeholder"></div>
-    
-    <script>
+      <script>
         fetch('nav.html')
             .then(res => res.text())
             .then(html => document.getElementById('nav-placeholder').innerHTML = html);
         fetch('footer.html')
             .then(res => res.text())
             .then(html => document.getElementById('footer-placeholder').innerHTML = html);
-        fetch('contact.html')
-            .then(res => res.text())
-            .then(html => document.getElementById('contact-placeholder').innerHTML = html);
     </script>
-    <section class="intro-section">
-        <h1 class="intro-title">Communication</h1>
-        <p class="intro-text">
-        <p>Use this space to explain how you communicate with your team.</p>
-    </section>
-    <section>
-        <h2><span class="stage-title">Teams/Slack</span></h2>
-        <p>Explain how you communicate with your collages. Do you use Slack or Teams or any other instant messaging platform? Explain why you use this platform and in which situations you would use it. For example, you'd use this if you needed a quick, short response. </p>
-    </section>
-    <section>
-        <h2><span class="stage-title">Email</span></h2>
-        <p>Explain when you would use email within the company. Maybe if you needed to formally send information and need a paper trail. </p>
-    </section>
-    <section>
-        <h2><span class="stage-title">Video Call</span></h2>
-        <p>When would you set up a video call? This could be in a situation where you need to ask lots of questions or expect to be a lot of back and forth between the you and the person you're speaking with. </p>
-    </section>
-    <section>
-        <h2><span class="stage-title">Face-to-Face</span></h2>
-        <p>In more formal situations or at times when you need to collaborate with lots of people at once, do you set up meetings in person? Why is this the best way to communicate in these scenarios?  </p>
-    </section>
-    <footer>
-        <p>Just IT</p>
-    </footer>
 </body>
 </html>
