@@ -3,19 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="icon" type="image/x-icon" href="Images/Icons/favicon.ico"  />
+    <title>Portfolio - Claire Willott</title>
+    <link rel="icon" type="image/svg+xml" href="Images/Icons/cat-paw.svg" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="Profile.html">Profile</a>
-        <a href="MeetTheTeam.html">Meet The Team</a>
-        <a href="SDLC.html">SDLC</a>
-        <a href="MyTeam.html">MyTeam</a>
-        <a href="Communication.html">Communication</a>
-    </nav>
+    <header id="nav-placeholder"></header>
+    
+    <div class="spacer-small"></div>
+    <main>
+        <section class="intro">
+            <h1 style="text-align: center;"><strong>Portfolio</strong></h1>
+            <div class="profile-content">
+                <h2>Technical Skills</h2>
+                <p>As an Associate Software Engineer, I'm developing expertise in:</p>
+                <ul>
+                    <li>Microservices architecture and development</li>
+                    <li>Software engineering best practices</li>
+                    <li>Version control with Git</li>
+                    <li>Web development technologies</li>
+                    <li>Collaborative development processes</li>
+                </ul>
+                
+                <h2>Current Projects</h2>
+                <h3>Personal Website Template</h3>
+                <p>This website itself demonstrates my learning in HTML, CSS, and responsive web design as part of my apprenticeship requirements.</p>
+                
+                <h3>Microservices Learning</h3>
+                <p>Currently working on understanding microservices architecture patterns and implementation strategies at Sainsbury's.</p>
+                
+                <h2>Learning Goals</h2>
+                <p>I'm focused on expanding my knowledge in:</p>
+                <ul>
+                    <li>Advanced software architecture patterns</li>
+                    <li>Testing methodologies and frameworks</li>
+                    <li>Cloud technologies and deployment</li>
+                    <li>Performance optimization techniques</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <div id="contact-placeholder"></div>
+    <div id="footer-placeholder"></div>
+    
+    <script>
+        fetch('nav.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('nav-placeholder').innerHTML = html);
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+        fetch('contact.html')
+            .then(res => res.text())
+            .then(html => document.getElementById('contact-placeholder').innerHTML = html);
+    </script>
     <section class="intro-section">
         <h1 class="intro-title">Profile</h1>
         <p class="intro-text">
