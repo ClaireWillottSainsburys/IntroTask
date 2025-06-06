@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDLC - Claire Willott</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,26 +13,119 @@
     <main>
         <section class="intro">
             <h1>Software Development Life Cycle (SDLC)</h1>
-            <p>The Software Development Life Cycle (SDLC) is a structured process used for developing software applications. Explain the stages of the SDLC below, in detail:</p>            <h2>Planning</h2>
-            <p>Explain the Planning stage of the SDLC here...</p>
+            <p>The SDLC is a formal process of separate stages used in the development of software applications.</p>
+            
+            <div class="content-section">
+                <p class="stage-header">1. Planning</p>
+                <p class="body-text">The Planning stage is the first phase of a software development project. During this early phase, the project and stakeholders' requirements are researched and documented. A feasibility study may be completed to assess whether this project is achievable given technical, financial, and operational constraints.</p>
+                
+                <p class="body-text-spaced"><strong>Inputs:</strong> The objectives of the business, stakeholder requirements, financial budget, timeline/deadline for delivery, project scope</p>
+                <p class="body-text"><strong>Outputs:</strong> Project charter, feasibility study, high-level timeline, resource allocation plan, risk assessment</p>
+                <p class="body-text"><strong>Who's Involved:</strong> Project managers, business analysts, stakeholders, senior management, portfolio architects</p>
+                
+                <p class="body-text-spaced"><strong>How the Sainsbury's approach can be different:</strong><br>
+                Sainsbury's takes a structured and coordinated whole-company approach to new project planning. A lot of the IT projects are managed in house and it is difficult to coordinate multiple teams or domains. To increase certainty and reduce blockers, one or more "Architecture Impact Assessments" are completed in the early stages of new strategic initiatives. These assessments help identify dependencies or blockers as well as providing a clear picture of the End-to-End (E2E) impacts. This ensures that new projects align with the broader "North Star" architecture goals of the whole company as well as allowing each team to see where their work fits into the mosaic of the projects constantly on the go.</p>
+            </div>
+            
+            <div class="content-section">
+                <p class="stage-header">2. Requirements</p>
+                <p class="body-text">The Requirements phase is a more detailed dive into what the project is supposed to do and how. The functional requirements, what the project does, and the non-functional requirements, such as how quickly or securely it does them are worked out and agreed. Having this more detailed document listing the project specifications ensures that there's clarity for the engineering team that take on the task.</p>
+                
+                <p class="body-text"><strong>Inputs:</strong> Project charter, business objectives, stakeholder feedback, market research, user stories, existing system documentation</p>
+                <p class="body-text"><strong>Outputs:</strong> Requirements specification document, functional requirements list, non-functional requirements, acceptance criteria, user interface mockups</p>
+                <p class="body-text"><strong>Who's involved:</strong> Business analysts, product owners, end users, stakeholders, system architects, UX/UI designers</p>
+                
+                <p class="body-text-spaced"><strong>How the Sainsbury's approach can be different:</strong><br>
+                Sainsbury's takes a whole-company view for this stage, looking at company-wide impact further than just the usual introspective view of just the project itself. This E2E High-Level design early in the life of each project allows them to ensure that projects will meet the whole business strategy. Specialised staff such as Portfolio Architects and Senior Data Architects ensure that standard impact assessments are completed. This makes sure that new the IT solutions suggested for new projects fit into the company's "North Star" architecture goals.</p>
+            </div>
+            
+            <div class="content-section">
+                <p class="stage-header">3. Design</p>
+                <p class="body-text">The design phase takes the requirements and turns them into an actionable design. This could be the architecture diagrams for a new system, which parts of the system need to interact with others, databases, and high-level algorithms. This is the blueprint for implementation that will follow.</p>
+                
+                <p class="body-text"><strong>Inputs:</strong> Requirements specification, functional requirements, non-functional requirements, existing system architecture, technology constraints, business rules</p>
+                <p class="body-text"><strong>Outputs:</strong> System architecture diagrams, database design, API specifications, UI/UX wireframes, technical design document, component specifications</p>
+                <p class="body-text"><strong>Who's involved:</strong> System architects, software architects, database designers, UX/UI designers, technical leads, senior developers</p>
+                
+                <p class="body-text-spaced"><strong>How the Sainsbury's approach can be different:</strong><br>
+                Here Sainsbury's looks at the design from three angles, each informing the next level of detail. The Architecture Review looks at the big picture, the Solution Design builds on this and includes specifics such as costing, and the Detailed Technical Design goes right into the nitty-gritty, into things like code functions to be written. This multi-tier approach ensures that the solution is practical and cost-effective as well as being technically sound.</p>
+            </div>
+            
+            <div class="content-section">
+                <p class="stage-header">4. Development</p>
+                <p class="body-text">The development phase is where the actual coding of the project takes place. This is where the design documents and specifications are translated into working software. Developers write code, create databases, and build the various components of the system according to the design specifications.</p>
+                
+                <p class="body-text"><strong>Inputs:</strong> Technical design documents, architecture specifications, UI/UX designs, database schemas, API specifications, coding standards, development environment setup</p>
+                <p class="body-text"><strong>Outputs:</strong> Source code, compiled applications, database implementations, unit tests, code documentation, version control commits, build artifacts</p>
+                <p class="body-text"><strong>Who's involved:</strong> Software developers, programmers, database developers, DevOps engineers, technical leads, code reviewers</p>
+                
+                <p class="body-text-spaced"><strong>How the Sainsbury's approach can be different:</strong><br>
+                Sainsbury's takes a collaborative approach to development with cross-functional teams that include not just developers but also business analysts and quality assurance specialists working closely together throughout the development process. They emphasize continuous integration and frequent code reviews to maintain high quality standards and ensure that the code aligns with both technical requirements and business objectives.</p>
+            </div>
+            
+            <div class="content-section">
+                <p class="stage-header">5. Testing</p>
+                <p class="body-text">The testing phase ensures that the developed software meets the specified requirements and functions correctly. Various levels of testing are conducted to identify and fix bugs, verify functionality, and ensure the system performs as expected under different conditions.</p>
+                <p class="body-text">Different types of testing are performed including:</p>
+                
+                <ul class="justified-list">
+                    <li>Unit testing</li>
+                    <li>Integration testing</li>
+                    <li>System testing</li>
+                    <li>User acceptance testing</li>
+                </ul>
+                
+                <p class="body-text"><strong>Inputs:</strong> Compiled applications, test cases, requirements specifications, test data, testing environments, acceptance criteria, user stories</p>
+                <p class="body-text"><strong>Outputs:</strong> Test results, bug reports, test coverage reports, performance metrics, test documentation, defect logs, quality assurance sign-off</p>
+                <p class="body-text"><strong>Who's involved:</strong> Quality assurance engineers, test analysts, automated testing specialists, performance testers, business users, UAT coordinators</p>
+                
+                <p class="body-text-spaced"><strong>How the Sainsbury's approach can be different:</strong><br>
+                Sainsbury's incorporates continuous testing throughout the development lifecycle rather than treating it as a separate phase. They emphasize automated testing pipelines and involve business stakeholders early in the testing process to ensure that the solution meets real-world business needs. Their testing approach also includes comprehensive security testing and performance testing to ensure the solution can handle the scale and security requirements of a large retail operation.</p>
+            </div>
+            
+            <div class="content-section">
+                <p class="stage-header">6. Deployment</p>
+                <p class="body-text">The deployment phase involves moving the tested and approved software from development environments to production environments where end users can access it. This phase includes planning the deployment strategy, coordinating the rollout, and ensuring minimal disruption to existing systems.</p>
+                
+                <p class="body-text"><strong>Inputs:</strong> Tested and approved software, deployment scripts, production environment specifications, rollback plans, deployment schedule, user training materials</p>
+                <p class="body-text"><strong>Outputs:</strong> Live production system, deployment reports, user access configurations, monitoring setup, backup systems, go-live documentation</p>
+                <p class="body-text"><strong>Who's involved:</strong> DevOps engineers, system administrators, deployment managers, database administrators, network engineers, support teams</p>
+                
+                <p class="body-text">Different deployment strategies include:</p>
+                <ul class="justified-list">
+                    <li>Blue-Green Deployments</li>
+                    <li>Rolling Updates</li>
+                    <li>Canary Release</li>
+                </ul>
+                
+                <p class="body-text-spaced"><strong>How the Sainsbury's approach can be different:</strong><br>
+                Sainsbury's uses a phased deployment approach that prioritizes business continuity and minimal customer impact. They employ sophisticated monitoring and rollback procedures to ensure that any issues can be quickly resolved. Their deployment strategy also includes comprehensive staff training and change management processes to ensure that business users are prepared for new system functionality.</p>
+            </div>
+            
+            <div class="content-section">
+                <p class="stage-header">7. Maintenance</p>
+                <p class="body-text">The maintenance phase is the ongoing process of keeping the software system running smoothly after deployment. This includes fixing bugs that are discovered in production, implementing enhancements, updating the system for security patches, and adapting to changing business requirements.</p>
+ 
+                <p class="body-text">Key maintenance activities include:</p>
+                <ul class="justified-list">
+                    <li>Bug fixes and error corrections</li>
+                    <li>Performance optimization</li>
+                    <li>Security updates and patches</li>
+                    <li>Feature enhancements</li>
+                    <li>System monitoring and health checks</li>
+                </ul>
 
-            <h2>Requirements</h2>
-            <p>Explain the Requirements stage of the SDLC here...</p>
+                <p class="body-text"><strong>Inputs:</strong> Production system, user feedback, bug reports, change requests, security updates, performance monitoring data, business requirement changes</p>
+                <p class="body-text"><strong>Outputs:</strong> System updates, bug fixes, performance improvements, security patches, enhanced features, maintenance documentation, system health reports</p>
+                <p class="body-text"><strong>Who's involved:</strong> Maintenance developers, system administrators, support engineers, database administrators, security specialists, business analysts</p>
 
-            <h2>Design</h2>
-            <p>Explain the Design stage of the SDLC here...</p>
-
-            <h2>Development</h2>
-            <p>Explain the Development stage of the SDLC here...</p>
-
-            <h2>Testing</h2>
-            <p>Explain the Testing stage of the SDLC here...</p>
-
-            <h2>Deployment</h2>
-            <p>Explain the Deployment stage of the SDLC here...</p>
-
-            <h2>Maintenance</h2>
-            <p>Explain the Maintenance stage of the SDLC here...</p>
+                <p class="body-text-spaced"><strong>How the Sainsbury's approach can be different:</strong><br>
+                Sainsbury's takes a proactive approach to maintenance with continuous monitoring and predictive analytics to identify potential issues before they impact customers. They maintain dedicated support teams that work closely with business units to prioritize maintenance activities based on business impact. Their maintenance strategy also includes regular system health assessments and planned upgrade cycles to ensure that systems remain current and secure.</p>
+            </div>
+            
+            <div class="content-section">
+                <p class="body-text">Following the SLDC process ensures that new software projects are written with clear goals in mind. Sainsbury's have put a lot of guard rails around the standard process to ensure that new projects integrate well, standard tools are used and that the final product is resilient and maintained.</p>
+            </div>
         </section>
     </main>
     
@@ -45,9 +139,6 @@
         fetch('footer.html')
             .then(res => res.text())
             .then(html => document.getElementById('footer-placeholder').innerHTML = html);
-        fetch('contact.html')
-            .then(res => res.text())
-            .then(html => document.getElementById('contact-placeholder').innerHTML = html);
     </script>
 </body>
 </html>

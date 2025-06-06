@@ -1,7 +1,9 @@
 To run locally
 
-Open terminal and enter the following
-
-cd "<<Replace with local file location>>/IntroTaskTemplate/HTML Template" && python3 -m http.server 8000
+Open terminal and enter the following command to run the server from inside the HTML Template directory:
 
 cd "/Users/claire.willott/IntroTaskTemplate/HTML Template" && python3 -m http.server 8000
+
+Then open your browser and go to: http://localhost:8000/index.html
+
+Alternative: If running from the parent directory, use: http://localhost:8000/HTML%20Template/index.html
